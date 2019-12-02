@@ -1,0 +1,140 @@
+/*Barra de navegación*/
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800");
+
+[data-component='sidebar'] .sidebar {
+position: fixed;
+    z-index: 9999;
+    font-family: 'Open Sans', sans-serif;
+}
+[data-component='sidebar'] .first-menu {
+    position: fixed;
+    background-color: #DAC176;
+    height: 100vw;
+    width: 30px;
+    top: -16px;
+    left: 0px;
+    overflow: hidden;
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+
+}
+[data-component='sidebar'] .first-menu .list-group-item {
+      border-right: 0;
+      list-style:none;
+      margin-top:15px;
+      margin-left:-30px;
+      text-align:left;
+
+}
+[data-component='sidebar'] .first-menu .list-group-item:not(last-child) {
+  border-bottom: 0;
+  padding-top:  5px;
+  padding-left: 5px;
+
+}
+[data-component='sidebar'] .first-menu .list-group-item:hover {
+        background-color: #BDA55D;
+
+}
+[data-component='sidebar'] .first-menu a {
+  white-space: nowrap;
+  color: white;
+  font-weight: 400;
+  font-size: 0.875em;
+  text-decoration: none;
+  margin-top: 10px;
+}
+[data-component='sidebar'] .first-menu a span {
+  opacity: 0;
+  visibility: hidden;
+  padding:10px;
+  vertical-align: 75%;
+
+}
+[data-component='sidebar'] .first-menu:hover span {
+  opacity: 1;
+  visibility: visible;
+}
+[data-component='sidebar'] .first-menu:hover {
+  width: 200px;
+}
+
+/*Tablas*/
+table.tabla, th.tabla, td.tabla {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th.tabla {
+	width:150px;
+	height:50px;
+}
+td.tabla {
+	text-align: center;
+}
+/*Boton*/
+.boton{
+    text-decoration: none;
+    width: 100px;
+    padding: 5px;
+    font-size: 16px;
+    color: white;
+    background-color: #E7C27D;
+    border-radius: 6px;
+    border: 1px solid black;
+  }
+
+/*Tabla Boton*/
+
+th {
+	width:150px;
+	height:50px;
+}
+td {
+	text-align: center;
+}
+body {
+	background-color: #FFFFBF;
+    margin-left: 100px;
+}
+
+/*Burbuja de incidencias*/
+.modalmask {
+	position: fixed;
+	font-family: Arial, sans-serif;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+	z-index: 99999;
+	opacity:0;
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+	pointer-events: none;
+}
+.modalmask:target {
+	opacity:1;
+	pointer-events: auto;
+}
+.modalbox{
+	width: 400px;
+	position: relative;
+	padding: 5px 20px 13px 20px;
+	background: #fff;
+	border-radius:3px;
+	-webkit-transition: all 500ms ease-in;
+	-moz-transition: all 500ms ease-in;
+	transition: all 500ms ease-in;
+
+}
+
+.movedown {
+	margin: 0 auto;
+}
+
+#todo{
+  width: 50px;
+}

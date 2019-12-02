@@ -1,0 +1,17 @@
+.texto{
+  width: 70%;
+  height: auto;
+  margin-left: 10%;
+  margin-top: 20px;
+  margin-bottom: 80px;
+}
+
+img{
+  width: 100%;
+  border: 1px solid black;
+}
+
+body {
+	background-color: #FFFFBF;
+    margin-left: 100px;
+}
