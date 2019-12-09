@@ -19,19 +19,12 @@
 <?php
 //Conectamos a la base de datos
     require_once 'conexion.php';
-    $sqlcomment = "SELECT column_comment FROM information_schema.columns WHERE table_name = 'tbl_incidencias' ORDER BY `column_comment` DESC";
-    $comments = mysqli_query($connexion, $sqlcomment);
-    while(($comment = mysqli_fetch_array($comments, MYSQLI_ASSOC)))
-    { 
-        if($comment['column_comment']!=="")
-                           
-        {                       
-            foreach ($comment as $head)
-            {
-                echo "<th align='center'>". $head . "</th>";                        
-            }
-        }    
-    }
+    
+    echo "<th align='center'>Usuario</th>";
+    echo "<th align='center'>Recurso</th>";   
+    echo "<th align='center'>Inicio de incidencia</th>";
+    echo "<th align='center'>Final de incidencia</th>";   
+    echo "<th align='center'>Descripción</th>";   
     echo "<th id='todo'><label>Todo</label><br><input type='checkbox' onchange='SelectAll(this,3)' name='recurso[]'></th>";
     echo "</tr>";
     

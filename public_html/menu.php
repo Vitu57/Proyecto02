@@ -37,9 +37,9 @@
 				// Creamos la variable name y le asignamos el valor del nombre del usuario de la sesión actual para luego hacer la consulta
 				$name=$_SESSION["nombre"];
 				// Creamos la variable txt_qry_all y guardamos en ella la consulta que nos devolverá o el nombre del usuario de la sesión actual o null si el usuario no tiene los privilegios suficientes para que se muestre el botón de Incidencias
-				$txt_qry_all="SELECT nombre_usuarios FROM tbl_usuarios WHERE nombre_usuarios='$name' and admin_usuarios=1 OR nombre_usuarios='$name' and informatico_usuarios=1";
+				$txt_qry_all="SELECT nombre_usuarios FROM tbl_usuarios WHERE nombre_usuarios='$name' and perfil='1' OR nombre_usuarios='$name' and perfil='2'";
 				// Creamos la variable txt_qry_admin y guardamos en ella la consulta que nos devolverá o el nombre del usuario de la sesión actual o null si el usuario no tiene los privilegios suficientes para que se muestre el botón de Usuarios
-				$txt_qry_admin="SELECT nombre_usuarios FROM tbl_usuarios WHERE nombre_usuarios='$name' and admin_usuarios=1";
+				$txt_qry_admin="SELECT nombre_usuarios FROM tbl_usuarios WHERE nombre_usuarios='$name' and perfil=1";
 				// Ahora hacemos la consulta a nuestra base de datos con la consulta que hemos echo anteriormente
 				$qry_res_all=mysqli_query($connexion,$txt_qry_all);
 				// Realizamos la consulta de nuevo pero la guardamos en otra variable para solucionar un error en los if

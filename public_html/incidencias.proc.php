@@ -17,7 +17,9 @@ $descripcion = $_REQUEST["desc"];
                 $insert ="INSERT INTO `tbl_incidencias`( `inicio_incidencias`, `informe_incidencias`, `id_recursos`, `id_usuarios`) VALUES ('$fecha', '$descripcion','$id_recurso','$id_user')";
 
                 $update="UPDATE `tbl_recursos` SET `estado_recursos` = 'incidencia' WHERE `tbl_recursos`.`id_recursos` = $id_recurso";
+				$update_historial="UPDATE `tbl_reservas` SET `final_reservas` = '$fecha' WHERE `id_recursos` = $id_recurso";
                 $sql_query_update=mysqli_query($connexion, $update);
+				$sql_query_update=mysqli_query($connexion, $update_historial);
                 $sql_query_insert=mysqli_query($connexion, $insert);
                 header('Location: principal.php'); 
 		      

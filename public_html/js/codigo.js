@@ -26,12 +26,11 @@ function ValidacionLogin(){
 	
 }
 
-function executeJS(id,nom,tipo)
+function executeJS(id)
 {
-    var b = document.getElementById('nrecurso'); 
-    b.value = nom;
     var a = document.getElementById('info').setAttribute("value", id);
-    var c = document.getElementById('mensaje_incidencia').innerHTML = "Abrir incidencia de " + tipo + " de " + nom
+    var b = document.getElementById('info2').setAttribute("value", id);
+    var c = document.getElementById('mensaje_incidencia').innerHTML = "Abrir incidencia";
 }
 
 var td = document.getElementsByTagName("td");
